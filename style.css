@@ -1,0 +1,135 @@
+*{/*Seletor univesal '*' aplica formatação para todos os elementos*/
+    box-sizing: border-box; /*Fixa o tamanho do elemento de forma que não sofra alteração com a mudança no Padding*/
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    position: fixed;
+    width: 100%; /*Largura da pagina*/
+    height: 150px; /*Altura da pagina*/
+    /* background-color: rgb(126, 211, 89); */
+    margin-left: auto;
+    margin-right: auto;
+    /* Adicionar imagem no css como background */
+
+}
+
+main{
+    width: 100%;
+    background-color: rgb(204, 242, 255);
+    /*Configuração para a caixa crescer conforme o conteudo*/
+    min-height: 1000px;
+    height: auto;
+    overflow: hidden; /* Permite esconder a barra de rolagem*/
+
+}
+
+footer{
+    width: auto;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 0, 0);
+}
+
+#info{
+    width: 100%;
+    /*Configuração para a caixa crescer conforme o conteudo*/
+    min-height: 1000px;
+    height: auto;
+    overflow: hidden; /* Permite esconder a barra de rolagem*/
+    border: solid 1px #6b6b6b;
+    /*Centralizar o objeto*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #b82525;
+}
+
+
+/*Seção do Cabeçalho*/
+
+#menu{
+    width: 100%;
+    height: 50px;
+    /* background-color: rgb(39, 52, 224);   */
+}
+
+.menu-item {
+    position: fixed;
+    top: 30px;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 70px;
+    /* background-color: rgb(139, 241, 85); */
+    z-index: 999;
+}
+
+.menu-item li{
+    display: block;
+    width: 150px;
+    height: inherit;
+    float: right; /*Coloca os elementos na horizontal*/
+    text-align: center;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: 600;
+    list-style: none; /*Retira o marcador*/
+    padding-top: 30px;
+    color: #000000;
+    margin-left: 5px;
+    margin-right: 30px;
+    
+    /*Incluir incones - list-style: url(https://www.flaticon.com);*/
+}
+
+.menu-item li:hover{
+    height: 60px;
+    color: #000;
+    transition: 1s;
+    cursor:pointer;
+    background-color: rgb(25, 172, 235);
+}
+
+.menu-item li a {
+    color: rgb(233, 233, 233); /* Cor texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.figure img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Mantém a proporção e corta o excesso */
+}
+
+/*Seção do corpo da página*/
+
+.figure2 img {
+    float: right; /*Coloca os elementos na horizontal*/
+    justify-content: center;
+    padding-left: -10px;
+    margin-right: auto;
+    margin-right: 10px;
+    margin-left: 28px;
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+}
+
+.h2{
+    font-family: verdana;
+    width: 100%;
+    height: 100px;
+    margin-left: 42%;
+    margin-top: 200px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: #000;
+    
+}
+
+/*Seção do rodapé*/
