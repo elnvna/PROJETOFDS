@@ -1,76 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!--Define o idioma da pagina-->
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> <!--Utilizado para que caracteres especiais sejam exibidos corretamente na pagina-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Controla a forma como uma página web é exibida em dispositivos móveis -->
-    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--Importando o CSS-->
-    <title>DESENVOLVENDO UM SITE</title> <!--Titulo site-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento </title>
+    <link rel="stylesheet" type="text/css" href="styleNew.css"> 
 </head>
 <body>
-    <header> <!--Cabeçalho do site-->
-        <div>
-            <figure class="figure"> 
-                <img src="imagens/tecnologia.jpg" alt="Tecnologica">
-            </figure>
-        </div>
-        <!-- Representa a criação da área do menu-->
+    <header>
         <nav id="menu">
             <ul class="menu-item">
-                <li><a href="#integrantes">Integrantes</a></li>
-                <li><a href="#tarefas">Tarefas</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="index.html">Integrantes</a></li>
+                <li><a href="about.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
-    <main> <!-- Conteúdo do site-->
-        <section id="page"></section>
+    <main>
         <h2 class="h2"> Integrantes </h2>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
-        <div>
-            <figure class="figure2"> 
-                <img src="imagens/molde.jpg" alt="Molde">
-            </figure>
-        </div>
+        <section id="page">
+            <div class="integrantesNomes">
+                <figure class="figure2"> 
+                    <img src="imagens/avatar-1.jpeg" alt="Molde">
+                </figure>
+            </div>
+            <div class="integrantesNomes">
+                <figure class="figure2"> 
+                    <img src="imagens/avatar-2.jpeg" alt="Molde">
+                </figure>
+            </div>
+            <div class="integrantesNomes">
+                <figure class="figure2"> 
+                    <img src="imagens/avatar-3.jpeg" alt="Molde">
+                </figure>
+            </div>
+            <div class="integrantesNomes">
+                <figure class="figure2"> 
+                    <img src="imagens/avatar-4.PNG" alt="Molde">
+                </figure>
+            </div>
+        </section>
     </main>
 
-    <footer> <!--Rodapé do site-->
+    <div id="integrantes"></div>
 
-    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <h2 id="modal-name"></h2>
+            <h3 id="modal-ru"></h3>
+            <img id="modal-image" src="" alt="Imagem" width="200">
+            <p><strong id="modal-origin-title">Origem:</strong> <span id="modal-origin"></span></p>
+            <p><strong id="modal-occupation-title">Ocupação:</strong> <span id="modal-occupation"></span></p>
+            <p><strong id="modal-hobbies-title">Hobbies:</strong> <span id="modal-hobbies"></span></p>
+            <p><strong id="modal-position-title">Posição desejada:</strong> <span id="modal-position"></span></p>
+            <p><strong id="modal-contribution-title">Contribuição:</strong> <span id="modal-contribution"></span></p>
+        </div>
+    </div>
+
+    <h2 class="title">Contribuições da Equipe</h2>
+
+<table border="1" id="contribuicaoTable">
+        <tr>
+            <th>Nome</th>
+            <th>Contribuição</th>
+        </tr>
+</table>
+
+
+    
+    <script>
+      const users = [   
+        {Nome: "Bruna da Costa Aguiar Silva", RU: 5205425},
+        {Nome: "Elaine Viana Dias", RU: 5083097},
+        {Nome: "Mariana Souza", RU: 5194809},
+        {Nome: "Rafael Reis da Silva", RU: 4833612},
+      ];
+
+      const Integrantes = document.getElementById('integrantes');
+      users.forEach(user => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+          card.innerHTML = `
+          <div id="nome">
+              <p>${user.Nome}</p>
+              <button onclick="openModal(${user.RU})">Saiba mais</button>
+          </div>`;
+          Integrantes.appendChild(card);
+      });
+
+      const detailsUsers = [
+        {
+          RU: 5205425,
+          name: "Bruna da Costa Aguiar Silva",
+          image: "imagens/avatar-1.jpeg",
+          origin: "Rio de Janeiro",
+          occupation: "Estagiária de Desenvolvimento Web e Analista Financeira",
+          hobbies: ["Leitura", "ver filmes e séries ", "corrida e dança"],
+          desiredPosition: "Desenvolvedora Full Stack",
+          contribution: "Desenvolvimento do código",
+        },
+        {
+          RU: 5083097,
+          name: "Elaine Viana Dias",
+          image: "imagens/avatar-2.jpeg",
+          origin: "Itapevi-SP",
+          occupation: "Monitora de Qualidade",
+          hobbies: ["Assistir séries","passear e dormir"],
+          desiredPosition: "Desenvolvedora Front-end",
+          contribution: "Desenvolvimento do código",
+        },
+        {
+          RU: 5194809,
+          name: "Mariana Souza",
+          image: "/placeholder.svg?height=400&width=400",
+          origin: "Santo André-SP",
+          occupation: "Assistente Administrativo TI",
+          hobbies: ["Dormir","ver séries e passear"],
+          desiredPosition: "Analista de sistemas",
+          contribution: "Lista 01 de atividade",
+        },
+        {
+          RU: 4833612,
+          name: "Rafael Reis da Silva",
+          image: "imagens/avatar-4.PNG",
+          origin: "Carapicuíba- SP",
+          occupation: "Analista Administrativo",
+          hobbies: ["Ouvir músicas","ver séries e filmes", "jogar vídeo game e sair com amigos"],
+          desiredPosition: "Analista de sistemas e banco de dados",
+          contribution: "Lista 01 de atividade",
+        },
+      ];
+
+      const modal = document.getElementById('modal');
+      const closeBtn = document.getElementById('close');
+
+      function openModal(userId) {
+        const user = detailsUsers.find(u => u.RU === userId);
+        if (user) {
+          document.getElementById('modal-name').textContent = user.name;
+          document.getElementById('modal-ru').textContent =`RU: ${user.RU}`;
+          document.getElementById('modal-image').src = user.image;
+          document.getElementById('modal-origin').textContent = ` ${user.origin}`;
+          document.getElementById('modal-occupation').textContent = ` ${user.occupation}`;
+          document.getElementById('modal-hobbies').textContent = `${user.hobbies.join(', ')}`;
+          document.getElementById('modal-position').textContent = ` ${user.desiredPosition}`;
+          document.getElementById('modal-contribution').textContent = ` ${user.contribution}`;
+          modal.style.display = 'block';
+        }
+      }
+
+      closeBtn.onclick = function() {
+        modal.style.display = 'none';
+      };
+
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      };
+
+const table = document.getElementById('contribuicaoTable');
+
+detailsUsers.forEach(user => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td>${user.name}</td>
+        <td>${user.contribution}</td>
+    `;
+    table.appendChild(row);
+});
+    </script>
 
 </body>
+
+<footer>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+    <p>Trabalho apresentado para a disciplina de Fundamentos de Desenvolvimento de Software</p>
+</footer>
+
 </html>
