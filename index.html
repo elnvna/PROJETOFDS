@@ -55,6 +55,7 @@
             <p><strong id="modal-hobbies-title">Hobbies:</strong> <span id="modal-hobbies"></span></p>
             <p><strong id="modal-position-title">Posição desejada:</strong> <span id="modal-position"></span></p>
             <p><strong id="modal-contribution-title">Contribuição:</strong> <span id="modal-contribution"></span></p>
+            <p><strong id="modal-redeSocial-title">Rede Social:</strong> <span id="modal-redeSocial"></span></p>
         </div>
     </div>
 
@@ -93,42 +94,50 @@
         {
           RU: 5205425,
           name: "Bruna da Costa Aguiar Silva",
+          username:"Bruna",
           image: "imagens/avatar-1.jpeg",
           origin: "Rio de Janeiro",
           occupation: "Estagiária de Desenvolvimento Web e Analista Financeira",
           hobbies: ["Leitura", "ver filmes e séries ", "corrida e dança"],
           desiredPosition: "Desenvolvedora Full Stack",
           contribution: "Desenvolvimento do código",
+          redeSocial:"https://www.linkedin.com/in/brunna-costa/",
         },
         {
           RU: 5083097,
           name: "Elaine Viana Dias",
+          username:"Elaine",
           image: "imagens/avatar-2.jpeg",
           origin: "Itapevi-SP",
           occupation: "Monitora de Qualidade",
           hobbies: ["Assistir séries","passear e dormir"],
           desiredPosition: "Desenvolvedora Front-end",
           contribution: "Desenvolvimento do código",
+          redeSocial:"https://www.linkedin.com/in/elaine-viana-dias-66b53719a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         },
         {
           RU: 5194809,
           name: "Mariana Souza",
+          username:"Mariana",
           image: "imagens/avatar-3.jpeg",
           origin: "Santo André-SP",
           occupation: "Assistente Administrativo TI",
           hobbies: ["Dormir","ver séries e passear"],
           desiredPosition: "Analista de sistemas",
           contribution: "Lista 01 de atividade",
+          redeSocial:"https://www.linkedin.com/in/rafael-reis-835b3b72?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
         {
           RU: 4833612,
           name: "Rafael Reis da Silva",
+          username:"Rafael",
           image: "imagens/avatar-4.PNG",
           origin: "Carapicuíba- SP",
           occupation: "Analista Administrativo",
           hobbies: ["Ouvir músicas","ver séries e filmes", "jogar vídeo game e sair com amigos"],
           desiredPosition: "Analista de sistemas e banco de dados",
           contribution: "Lista 01 de atividade",
+          redeSocial:"https://www.linkedin.com/in/rafael-reis-835b3b72?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         },
       ];
 
@@ -146,6 +155,8 @@
           document.getElementById('modal-hobbies').textContent = `${user.hobbies.join(', ')}`;
           document.getElementById('modal-position').textContent = ` ${user.desiredPosition}`;
           document.getElementById('modal-contribution').textContent = ` ${user.contribution}`;
+          document.getElementById('modal-redeSocial').innerHTML = `<a href="${user.redeSocial}" target="_blank" rel="noopener noreferrer">LinkedIn/${user.username}</a>`;
+
           modal.style.display = 'block';
         }
       }

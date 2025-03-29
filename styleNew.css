@@ -192,13 +192,13 @@ button {
 }
 
 
-#modal-name-title, #modal-image-title, #modal-origin-title, #modal-occupation-title, #modal-hobbies-title, #modal-position-title, #modal-contribution-title{
+#modal-name-title, #modal-image-title, #modal-origin-title, #modal-occupation-title, #modal-hobbies-title, #modal-position-title, #modal-contribution-title,#modal-redeSocial-title{
     color:#00b4d8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
-#modal-image, #modal-origin, #modal-occupation, #modal-hobbies, #modal-position, #modal-contribution,#modal-ru{
+#modal-image, #modal-origin, #modal-occupation, #modal-hobbies, #modal-position, #modal-contribution,#modal-ru,#modal-redeSocial{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -280,3 +280,20 @@ footer {
     margin: 0;
     font-size: 14px;
 }
+
+#modal-redeSocial a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+  }
+  
+  #modal-redeSocial a:hover {
+    text-decoration: underline; 
+  }
+
+.cardMobile{
+    display: none;
+}
+
+ 
+
