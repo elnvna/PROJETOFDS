@@ -290,7 +290,7 @@ footer {
     color: white;
     text-align: center;
     margin-top: 60px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-family: 'Arial', sans-serif;
