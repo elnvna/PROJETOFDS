@@ -16,10 +16,10 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 15vh;
     overflow: hidden;
     font-family: serif;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
 }
 
 nav#menu {
@@ -125,14 +125,14 @@ h3 {
 }
 
 .descricao_trabalho {
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding-top: 20px;
     color: white;
     width: 40%; /* Largura do elemento */
     margin: 0 auto; /* Centraliza o bloco */
     text-align: justify; /* Justifica o texto dentro do bloco */
     line-height: 1.6;
-    
+    display: block; /* Garantia de que o elemento é um bloco (pode ser desnecessário se já for um bloco por padrão) */
 }
 
 
@@ -315,5 +315,3 @@ footer {
 .cardMobile{
     display: none;
 }
-
- 
