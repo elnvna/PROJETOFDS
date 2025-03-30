@@ -19,7 +19,7 @@ header {
     height: 15vh;
     overflow: hidden;
     font-family: serif;
-    margin-bottom: -30px;
+    margin-bottom: -20px;
 }
 
 nav#menu {
@@ -282,7 +282,7 @@ th, td {
 
 #title_about{
     color: #00b4d8;
-    
+    margin-top: -40px;
 }
 
 footer {
@@ -315,3 +315,5 @@ footer {
 .cardMobile{
     display: none;
 }
+
+ 
