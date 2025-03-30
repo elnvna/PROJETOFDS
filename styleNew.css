@@ -1,3 +1,9 @@
+*{/*Seletor univesal '*' aplica formatação para todos os elementos*/
+    box-sizing: border-box; /*Fixa o tamanho do elemento de forma que não sofra alteração com a mudança no Padding*/
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background: linear-gradient(to bottom, #0a1629, #172554);
     color: #fff;
@@ -13,14 +19,14 @@ header {
     height: 15vh;
     overflow: hidden;
     font-family: serif;
+    margin-bottom: -50px;
 }
 
 nav#menu {
     position: absolute;
     top: 20px;
-    left: 90%;
-    transform: translateX(-50%);
-    border-radius: 8px;
+    right: 5%; /* Alinha à direita de forma mais previsível */
+    transform: translateX(0); /* Removendo o deslocamento que pode ser afetado pelo zoom */
 }
 
 .menu-item li a:hover {
@@ -47,15 +53,17 @@ nav#menu {
 
 #page {
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 40px; /* Espaçamento entre os grupos */
+    width: 100%;
     padding-top: 40px;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
 }
 
 h2 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 2rem;
     color: white;
     margin: auto;
 }
@@ -65,8 +73,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0px;
+    width: 300px; /* Garante que cada conjunto (imagem + nome) tenha uma largura fixa */
+    gap: 20px;
 }
+
 
 .figure2 {
     display: flex;
@@ -103,36 +113,42 @@ h2 {
     padding-inline: 100px;
     color: white;
     font-family: serif;
+    width: auto; /* Impede que a largura empurre os elementos */
 }
 
 h3 {
     text-align: center;
-    font-size: 32px;
+    font-size: 1.8rem;
     padding-top: 80px;
     color: rgba(34, 24, 120, 0.941);
 
 }
 
 .descricao_trabalho {
-    font-size: 22px;
+    font-size: 1.3em;
     padding-top: 20px;
     color: white;
-    width: 40%;
-    margin: 0 auto;
-    text-align: justify;
+    width: 40%; /* Largura do elemento */
+    margin: 0 auto; /* Centraliza o bloco */
+    text-align: justify; /* Justifica o texto dentro do bloco */
     line-height: 1.6;
+    display: block; /* Garantia de que o elemento é um bloco (pode ser desnecessário se já for um bloco por padrão) */
 }
+
 
 button {
     background-color: #00b4d8;
     color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-top: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
     border: none;
-    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 15px 15px;  /* Diminui o espaço horizontal */
+    
 }
 
 
@@ -191,11 +207,13 @@ button {
     margin-top: -30px;
 }
 
-
 #modal-name-title, #modal-image-title, #modal-origin-title, #modal-occupation-title, #modal-hobbies-title, #modal-position-title, #modal-contribution-title,#modal-redeSocial-title{
-    color:#00b4d8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite ajuste em telas menores */
+    justify-content: space-between; /* Distribui uniformemente */
+    align-items: center; /* Alinha verticalmente */
+    gap: 40px; /* Espaço entre os itens */
+    width: 100%; /* Ocupar toda a largura disponível */
 }
 
 #modal-image, #modal-origin, #modal-occupation, #modal-hobbies, #modal-position, #modal-contribution,#modal-ru,#modal-redeSocial{
@@ -224,11 +242,12 @@ button {
 
 
 table {
-    width: 50%;
+    width: 100%; /* Ajusta a largura para 100% da área disponível */
+    max-width: 800px; /* Limita o tamanho máximo da tabela */
     border-collapse: collapse;
     margin: auto; 
+    margin-top: 30px;
     text-align: center;
-    margin-top: -80px;
     border-top: 1px solid rgba(0, 102, 204, 0.3);
     border-bottom: 1px solid rgba(0, 102, 204, 0.3); 
     border-left: none;  
@@ -239,6 +258,7 @@ table {
 
 
 #contribuicaoTable, th, td {
+    margin-bottom: 70px;
     font-family: 'Arial', sans-serif; 
     font-size: 18px;
     padding-block: 15px;
@@ -262,6 +282,7 @@ th, td {
 
 #title_about{
     color: #00b4d8;
+    
 }
 
 footer {
@@ -296,4 +317,3 @@ footer {
 }
 
  
-
